@@ -21,6 +21,6 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASS
     - name: Build the docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag newimg:$(date +%s)
     - name: Docker Push
       run: docker push %{{secrets.DOCKER_USER}}/%{{secrets.REPO_NAME}}
