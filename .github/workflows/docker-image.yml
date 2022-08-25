@@ -27,6 +27,6 @@ jobs:
     - name: Build the docker image
       run: docker build . --file Dockerfile --tag my-image-name
     - name: Tag the file
-      run: docker tag my-image-name DOCKER_USER/REPO_NAME:latest
+      run: docker tag my-image-name $DOCKER_USER/$REPO_NAME:latest
     - name: Docker Push
-      run: docker push DOCKER_USER/REPO_NAME:latest
+      run: docker push $DOCKER_USER/$REPO_NAME:latest
